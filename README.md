@@ -1,0 +1,2 @@
+# Computer-heros
+QT verkefni
