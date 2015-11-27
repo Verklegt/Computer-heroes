@@ -35,3 +35,11 @@ void computerheroes::addvector(const char name[])
         document.close();
     }
 }
+ostream& operator << (ostream& out, const computerheroes& scientists)
+{
+    for(unsigned int i = 0; i < scientists.computer.size(); i++)
+    {
+        out << scientists.computer[i] << ' ';
+    }
+    return out;
+}
