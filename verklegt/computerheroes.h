@@ -9,13 +9,15 @@ class computerheroes
 {
 public:
     computerheroes();
-    computerheroes(int birth, int death, string nafn, string k, string fact);
     void addvector(const char name[]);
     friend ostream& operator << (ostream& out, const computerheroes& scientists);
     bool contains(string checkstr) const;
+    void inputInfo(vector<string> computer, int n);
+    void inputFile(vector<string> computer);
 
 
 private:
+
     int yearOfBirth;
     int yearOfdeath;
     string name;
