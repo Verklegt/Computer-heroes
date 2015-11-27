@@ -35,6 +35,7 @@ void computerheroes::addvector(const char name[])
         document.close();
     }
 }
+
 ostream& operator << (ostream& out, const computerheroes& scientists)
 {
     for(unsigned int i = 0; i < scientists.computer.size(); i++)
@@ -42,4 +43,17 @@ ostream& operator << (ostream& out, const computerheroes& scientists)
         out << scientists.computer[i] << ' ';
     }
     return out;
+}
+
+bool computerheroes::contains(string checkstr) const
+{
+    for (unsigned int i = 0; i < computer.size(); i++)
+    {
+        if(checkstr == computer[i])
+        {
+            return true;
+        }
+    }
+
+    return false;
 }

@@ -12,6 +12,8 @@ public:
     computerheroes(int birth, int death, string nafn, string k, string fact);
     void addvector(const char name[]);
     friend ostream& operator << (ostream& out, const computerheroes& scientists);
+    bool contains(string checkstr) const;
+
 
 private:
     int yearOfBirth;
