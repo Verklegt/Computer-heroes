@@ -1,5 +1,5 @@
 #include "computerheroes.h"
-
+#include <fstream>
 computerheroes::computerheroes()
 {
     name = "";
@@ -16,6 +16,22 @@ computerheroes::computerheroes(int birth, int death, string nafn, string k, stri
     k = kyn;
     fact = facts;
 }
+void computerheroes::addvector(const char name[])
+{
+    ifstream document;
+    string temp;
 
+    document.open(name);
 
-
+    if(!document.fail())
+    {
+        while(document >> temp)
+        {
+                if(true) //Þessi setning til að tékka hvort strengurinn er nú þegar kominn í vektorinn
+                {
+                    computer.push_back(temp);
+                }
+        }
+        document.close();
+    }
+}
