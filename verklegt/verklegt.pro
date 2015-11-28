@@ -8,8 +8,8 @@ CONFIG -= app_bundle
 TEMPLATE = app
 
 SOURCES += main.cpp \
-    computerheroes.cpp
+    Heroes.cpp
 
 HEADERS += \
-    computerheroes.h
+    Heroes.h
 
