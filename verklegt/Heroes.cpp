@@ -32,25 +32,27 @@ void Heroes::inputInfo(int n){
 void Heroes::inputFile(){
 
     ofstream outputFile;
-    outputFile.open("upplysingar.txt");
+    outputFile.open("upplysingar.txt", ofstream::app);
 
     cout << "Name: ";
     getline(cin, name);
-    cout << "Gender:  ";
+    //cin >> name;
+    cout << "Gender: ";
+    //cin >> kyn;
     getline(cin, kyn);
-    cout << endl;
     cout << "Year of birth: ";
     cin >> yearOfBirth;
-    cout << endl;
     cout << "Year of death: ";
     cin >> yearOfdeath;
-    cout << endl;
     cout << "Facts: ";
-    getline(cin, facts);
+    //cin >> facts;
     cout << endl;
+    getline(cin, facts);
 
-    //computer.push_back(info);
+
+    //computer.push_back();
 
     outputFile.close();
 }
+
 
