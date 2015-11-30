@@ -1,0 +1,12 @@
+Name: John thor
+Gender: male
+Year of birth: 1994
+Year of death: 2999
+Facts: hann er meistari
+
+Name: john
+Gender: male
+Year of birth: 1993
+Year of death: 4999
+Facts: hann er svo mikill meistari
+

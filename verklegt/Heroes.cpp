@@ -56,24 +56,24 @@ void Heroes::printHero() {
 void Heroes::getHero() {
     Heroes info;
     cout << "Name: ";
-    cin >> info.name;
+    getline(cin,info.name);
     cout << "Gender: ";
     cin >> info.kyn;
     cout << "Year of birth: ";
     cin >> info.yearOfBirth;
     cout << "Year of death: ";
     cin >> info.yearOfDeath;
+    cin.ignore(numeric_limits < streamsize>::max(), '\n');
     cout << "Facts: ";
-    cin >> info.facts;
+    getline(cin,info.facts);
 
-    computer.push_back(info);
     inputdoc.push_back(info);
-    printtest();
+    vectorToDoc();
     inputdoc.pop_back();
 
 }
 
-void Heroes::printtest() {
+void Heroes::vectorToDoc() {
     ofstream outputFile;
     outputFile.open("upplysingar.txt", ofstream::app);
 
@@ -88,31 +88,3 @@ void Heroes::printtest() {
 
     outputFile.close();
 }
-
-/*void Heroes::inputFile(){
-    ofstream outputFile;
-    outputFile.open("upplysingar.txt", ofstream::app);
-
-    cout << "Name: ";
-    getline(cin, name);
-    outputFile << "Name: " << name << endl;
-    cout << "Gender: ";
-    getline(cin, kyn);
-    outputFile << "Gender: " << kyn << endl;
-    cout << "Year of birth: ";
-    cin >> yearOfBirth;
-    outputFile << "Gender: " << yearOfBirth << endl;
-    cout << "Year of Death: ";
-    cin >> yearOfdeath;
-    outputFile << "Gender: " << yearOfdeath << endl;
-    cin.ignore(numeric_limits < streamsize>::max(), '\n');
-    cout << "Facts: ";
-    getline(cin, facts);
-    outputFile << "Facts: " << facts << endl;
-    cout << endl;
-
-    //computer.push_back(info);
-
-    outputFile.close();
-}*/
-

@@ -13,7 +13,6 @@ void chooseNumb();
 
 int main()
 {
-    //vector<Heroes> computer;
     Heroes test;
     welcomeMessage();
     int n = 0;
@@ -21,7 +20,8 @@ int main()
         Heroes info;
         chooseNumb();
         cin >> n;
-        test.inputInfo(n);
+        cin.ignore(numeric_limits < streamsize>::max(), '\n'); //so getline works correctly after cin command
+        test.inputInfo(n); //jumps to the switch case
 
     }while(n == 1 || n == 2 || n == 3 || n == 4);
 

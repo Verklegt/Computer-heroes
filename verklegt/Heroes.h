@@ -18,7 +18,7 @@ public:
     void getHero();
     void inputInfo(int n);
     void inputFile();
-    void printtest();
+    void vectorToDoc();
     void printHero();
 
 private:
