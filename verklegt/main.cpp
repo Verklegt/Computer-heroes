@@ -45,11 +45,11 @@ void welcomeMessage() {
 }
 
 void chooseNumb() {
-    cout << ",--------------------------------------," << endl;
-    cout << "|  1. Input a computer scientist       |" << endl;
-    cout << "|  2. Get info on computer scientist   |" << endl;
-    cout << "|  3. sort computer scientist's        |" << endl;
-    cout << "|  4. This is awsome                   |" << endl;
-    cout << "|  Push any other button to quit!      |" << endl;
-    cout << "'--------------------------------------'" << endl;
+    cout << "            ,--------------------------------------," << endl;
+    cout << "            |  1. Input a computer scientist       |" << endl;
+    cout << "            |  2. Get info on computer scientist   |" << endl;
+    cout << "            |  3. sort computer scientist's        |" << endl;
+    cout << "            |  4. This is awsome                   |" << endl;
+    cout << "            |  Push any other button to quit!      |" << endl;
+    cout << "            '--------------------------------------'" << endl;
 }
