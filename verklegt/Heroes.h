@@ -1,6 +1,7 @@
 #ifndef HEROES_H
 #define HEROES_H
 #include <QCoreApplication>
+#include "Scientist.h"
 #include <iostream>
 #include <vector>
 #include <string>
@@ -14,19 +15,17 @@ class Heroes
 {
 public:
     Heroes();
-    Heroes(string n, string k, string f, int yB, int yD);
-    void getHero();
+    Heroes(string n, char k, string f, int yB, int yD);
+    vector<Scientist> getVec();
+    //vector<Scientist> setVec(int yearOfBirth, int yearOfDeath, string name, string kyn, string facts);
+    void getHero(string name, char kyn, int yearOfBirth, int yearOfDeath, string facts);
     void inputInfo(int n);
     void inputFile();
     void vectorToDoc();
     void printHero();
 
 private:
-    int yearOfBirth;
-    int yearOfDeath;
-    string name;
-    string kyn;
-    string facts;
+    vector<Scientist>v;
     vector<Heroes> computer;
     vector<Heroes> inputdoc;
 };

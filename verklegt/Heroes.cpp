@@ -6,17 +6,27 @@
 #include <vector>
 #include <limits>
 using namespace std;
-Heroes::Heroes() {}
 
-Heroes::Heroes(string n, string k, string f, int yB, int yD){
+Heroes::Heroes() {
+    v = vector<Scientist>();
+
+}
+vector<Scientist> Heroes::getVec(){
+    return v;
+}
+/*vector<Scientist> setVec(int yearOfBirth, int yearOfDeath, string name, string kyn, string facts){
+
+}*/
+
+/*Heroes::Heroes(string n, string k, string f, int yB, int yD){
     name = n;
     kyn = k;
     facts = f;
     yearOfBirth = yB;
     yearOfDeath = yD;
-}
+}*/
 
-void Heroes::inputInfo(int n){
+/*void Heroes::inputInfo(int n){
     switch (n){
         case 1:
             getHero();
@@ -31,9 +41,9 @@ void Heroes::inputInfo(int n){
         default:
             break;
        }
-}
+}*/
 
-void Heroes::printHero() {
+/*void Heroes::printHero() {
 
     string line;
       ifstream myfile ("upplysingar.txt");
@@ -48,14 +58,19 @@ void Heroes::printHero() {
 
       else cout << "Unable to open file" << endl;
 
+}*/
+void Heroes::getHero(string name, char kyn, int yearOfBirth, int yearOfDeath, string facts) {
 
+    Scientist s;
+    s.setName(name);
+    s.setKyn(kyn);
+    s.setYearOfBirth(yearOfBirth);
+    s.setYearOfDeath(yearOfDeath);
+    s.setFacts(facts);
 
-}
+    v.push_back(s);
 
-
-void Heroes::getHero() {
-    Heroes info;
-    cout << "Name: ";
+    /*cout << "Name: ";
     getline(cin,info.name);
     cout << "Gender: ";
     cin >> info.kyn;
@@ -69,11 +84,11 @@ void Heroes::getHero() {
 
     inputdoc.push_back(info);
     vectorToDoc();
-    inputdoc.pop_back();
+    inputdoc.pop_back();*/
 
 }
 
-void Heroes::vectorToDoc() {
+/*void Heroes::vectorToDoc() {
     ofstream outputFile;
     outputFile.open("upplysingar.txt", ofstream::app);
 
@@ -87,4 +102,4 @@ void Heroes::vectorToDoc() {
     }
 
     outputFile.close();
-}
+}*/
