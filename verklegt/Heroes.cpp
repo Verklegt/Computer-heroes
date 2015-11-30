@@ -22,6 +22,7 @@ void Heroes::inputInfo(int n){
             getHero();
             break;
         case 2:
+            printHero();
             break;
         case 3:
             break;
@@ -31,6 +32,27 @@ void Heroes::inputInfo(int n){
             break;
        }
 }
+
+void Heroes::printHero() {
+
+    string line;
+      ifstream myfile ("upplysingar.txt");
+      if (myfile.is_open())
+      {
+        while ( getline (myfile,line) )
+        {
+          cout << line << '\n';
+        }
+        myfile.close();
+      }
+
+      else cout << "Unable to open file";
+
+
+
+}
+
+
 void Heroes::getHero() {
     Heroes info;
     cout << "Name: ";

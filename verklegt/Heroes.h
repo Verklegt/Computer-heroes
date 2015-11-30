@@ -19,6 +19,8 @@ public:
     void inputInfo(int n);
     void inputFile();
     void printtest();
+    void printHero();
+
 private:
     int yearOfBirth;
     int yearOfDeath;

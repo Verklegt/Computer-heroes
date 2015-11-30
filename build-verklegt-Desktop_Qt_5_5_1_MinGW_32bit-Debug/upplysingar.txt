@@ -1,0 +1,22 @@
+Name: Dan¡el
+Gender: karl
+Gender: 1960
+Gender: 2030
+Facts: g¢Ğur kennari
+Name: Einar
+Gender: kk
+Gender: 1995
+Gender: 2150
+Facts: f¡nn gaur
+Name: einar
+Gender: kk
+Year of birth: 1995
+Year of death: 3450
+Facts: blablabla
+
+Name: Einar
+Gender: kk
+Year of birth: 1995
+Year of death: 2300
+Facts: sdafjldsakj
+
