@@ -1,6 +1,7 @@
 #include "User.h"
 #include "Service.h"
 #include <iostream>
+#include <limits>
 using namespace std;
 
 User::User()
@@ -8,7 +9,7 @@ User::User()
 
 }
 
-void welcomeMessage() {
+void User::welcomeMessage() {
     cout << "                |   |   '                    ,--.---." << endl;
     cout << "      ------    |---|,---.,---..   .,---.    ,--'   /    ------" << endl;
     cout << "      ------    |   ||   ||   ||   ||        |     |     ------  " << endl;
@@ -22,7 +23,7 @@ void welcomeMessage() {
     cout << "               | " << endl;
     cout << "\n\n";
 }
-void chooseNumb() {
+void User::chooseNumb() {
     cout << "            ,--------------------------------------," << endl;
     cout << "            |  1. Input a computer scientist       |" << endl;
     cout << "            |  2. Get info on computer scientist   |" << endl;
@@ -31,23 +32,22 @@ void chooseNumb() {
     cout << "            |  Push any other button to quit!      |" << endl;
     cout << "            '--------------------------------------'" << endl;
 }
-/*void User::getHero() {
+void User::getHero() {
 
-    cout << "Name: ";
-    cout << "Gender: ";
-    cout << "Year of birth: ";
-    cout << "Year of death: ";
-    cout << "Facts: ";
+    cout << "Name: " << endl;
+    cout << "Gender: " << endl;
+    cout << "Year of birth: " << endl;
+    cout << "Year of death: " << endl;
+    cout << "Facts: " << endl;
 
 
-}*/
-/*void Heroes::inputInfo(int n){
+}
+void User::inputInfo(int n){
     switch (n){
         case 1:
-            getHero();
+            addPerson();
             break;
         case 2:
-            printHero();
             break;
         case 3:
             break;
@@ -56,8 +56,8 @@ void chooseNumb() {
         default:
             break;
        }
-}*/
-void addPerson(){
+}
+void User::addPerson(){
 
         string name;
         char kyn;
@@ -67,14 +67,16 @@ void addPerson(){
 
         cout << "Name: ";
         getline(cin,name);
-        cout << "Gender: ";
+        cout << "Gender(F/M): ";
         cin >> kyn;
         cout << "Year of birth: ";
         cin >> yearOfBirth;
         cout << "Year of death: ";
         cin >> yearOfDeath;
+        cin.ignore(numeric_limits < streamsize>::max(), '\n'); //so getline works correctly after cin command
         cout << "Facts: ";
         getline(cin,fact);
+        cout << endl;
 
         //serv.getHero(name, kyn, yearOfBirth, yearOfDeath, fact);
 }
