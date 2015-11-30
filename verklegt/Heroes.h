@@ -5,6 +5,7 @@
 #include <istream>
 #include <string>
 #include <vector>
+#include <limits>
 using namespace std;
 
 
@@ -12,6 +13,7 @@ class Heroes
 {
 public:
     Heroes();
+    Heroes(string n, string k, string f, int yB, int yD);
     void inputInfo(int n);
     void inputFile();
 private:

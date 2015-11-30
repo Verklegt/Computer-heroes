@@ -4,11 +4,16 @@
 #include <istream>
 #include <string>
 #include <vector>
+#include <limits>
 using namespace std;
+Heroes::Heroes() {}
 
-Heroes::Heroes()
-{
-
+Heroes::Heroes(string n, string k, string f, int yB, int yD){
+    name = n;
+    kyn = k;
+    facts = f;
+    yearOfBirth = yB;
+    yearOfdeath = yD;
 }
 
 void Heroes::inputInfo(int n){
@@ -30,29 +35,28 @@ void Heroes::inputInfo(int n){
 
 }
 void Heroes::inputFile(){
-
     ofstream outputFile;
     outputFile.open("upplysingar.txt", ofstream::app);
 
     cout << "Name: ";
     getline(cin, name);
-    //cin >> name;
+    outputFile << "Name: " << name << endl;
     cout << "Gender: ";
-    //cin >> kyn;
     getline(cin, kyn);
+    outputFile << "Gender: " << kyn << endl;
     cout << "Year of birth: ";
     cin >> yearOfBirth;
-    cout << "Year of death: ";
+    outputFile << "Gender: " << yearOfBirth << endl;
+    cout << "Year of Death: ";
     cin >> yearOfdeath;
+    outputFile << "Gender: " << yearOfdeath << endl;
+    cin.ignore(numeric_limits < streamsize>::max(), '\n');
     cout << "Facts: ";
-    //cin >> facts;
-    cout << endl;
     getline(cin, facts);
+    outputFile << "Facts: " << facts << endl;
 
-
-    //computer.push_back();
+    //computer.push_back(info);
 
     outputFile.close();
 }
-
 

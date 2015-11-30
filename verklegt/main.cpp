@@ -4,6 +4,7 @@
 #include <istream>
 #include <string>
 #include <vector>
+#include <limits>
 using namespace std;
 
 void welcomeMessage();
@@ -18,6 +19,7 @@ int main()
     do{
         chooseNumb();
         cin >> n;
+        cin.ignore(numeric_limits < streamsize>::max(), '\n');
         test.inputInfo(n);
 
     }while(n == 1 || n == 2 || n == 3 || n == 4);
@@ -42,10 +44,11 @@ void welcomeMessage() {
 }
 
 void chooseNumb() {
-    cout << "The best computer scientist program ever !" << endl;
+    cout << "-------------------------------------" << endl;
     cout << "1. Input a computer scientist " << endl;
     cout << "2. Get info on computer scientist " << endl;
     cout << "3. sort computer scientist´s " << endl;
     cout << "4. This is awsome " << endl;
     cout << "Push any other button to quit!" << endl;
+    cout << "-------------------------------------" << endl;
 }
