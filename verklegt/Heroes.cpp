@@ -13,15 +13,13 @@ Heroes::Heroes(string n, string k, string f, int yB, int yD){
     kyn = k;
     facts = f;
     yearOfBirth = yB;
-    yearOfdeath = yD;
+    yearOfDeath = yD;
 }
 
 void Heroes::inputInfo(int n){
-
-
     switch (n){
         case 1:
-            inputFile();
+            getHero();
             break;
         case 2:
             break;
@@ -32,9 +30,44 @@ void Heroes::inputInfo(int n){
         default:
             break;
        }
+}
+void Heroes::getHero() {
+    Heroes info;
+    cout << "Name: ";
+    cin >> info.name;
+    cout << "Gender: ";
+    cin >> info.kyn;
+    cout << "Year of birth: ";
+    cin >> info.yearOfBirth;
+    cout << "Year of death: ";
+    cin >> info.yearOfDeath;
+    cout << "Facts: ";
+    cin >> info.facts;
+
+    computer.push_back(info);
+    inputdoc.push_back(info);
+    printtest();
+    inputdoc.pop_back();
 
 }
-void Heroes::inputFile(){
+
+void Heroes::printtest() {
+    ofstream outputFile;
+    outputFile.open("upplysingar.txt", ofstream::app);
+
+    for(unsigned int i = 0; i < inputdoc.size(); i++) {
+            outputFile << "Name: " << inputdoc[i].name << endl;
+            outputFile << "Gender: " << inputdoc[i].kyn << endl;
+            outputFile << "Year of birth: " << inputdoc[i].yearOfBirth << endl;
+            outputFile << "Year of death: " << inputdoc[i].yearOfDeath << endl;
+            outputFile << "Facts: " << inputdoc[i].facts << endl;
+            outputFile << endl;
+    }
+
+    outputFile.close();
+}
+
+/*void Heroes::inputFile(){
     ofstream outputFile;
     outputFile.open("upplysingar.txt", ofstream::app);
 
@@ -54,9 +87,10 @@ void Heroes::inputFile(){
     cout << "Facts: ";
     getline(cin, facts);
     outputFile << "Facts: " << facts << endl;
+    cout << endl;
 
     //computer.push_back(info);
 
     outputFile.close();
-}
+}*/
 

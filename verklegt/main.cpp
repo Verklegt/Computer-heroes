@@ -1,9 +1,10 @@
 #include "Heroes.h"
-#include <fstream>
+#include <QCoreApplication>
 #include <iostream>
-#include <istream>
-#include <string>
 #include <vector>
+#include <string>
+#include <fstream>
+#include <sstream>
 #include <limits>
 using namespace std;
 
@@ -12,14 +13,14 @@ void chooseNumb();
 
 int main()
 {
-    vector<Heroes> computer;
+    //vector<Heroes> computer;
     Heroes test;
     welcomeMessage();
     int n = 0;
     do{
+        Heroes info;
         chooseNumb();
         cin >> n;
-        cin.ignore(numeric_limits < streamsize>::max(), '\n');
         test.inputInfo(n);
 
     }while(n == 1 || n == 2 || n == 3 || n == 4);
