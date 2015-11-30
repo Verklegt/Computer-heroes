@@ -25,8 +25,8 @@ public:
     void printHero();
 
 private:
-    vector<Scientist>v;
+    vector<Scientist> v;
     vector<Heroes> computer;
-    vector<Heroes> inputdoc;
+    //vector<Heroes> inputdoc;
 };
 #endif // COMPUTERHEROS_H

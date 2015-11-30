@@ -10,9 +10,13 @@ Service::Service()
     hero = Heroes();
 }
 vector<Scientist> Service::getV(){
-    hero.getVec();
+    return hero.getVec();
 }
 void Service::getHero(string name, char kyn, int yearOfBirth, int yearOfDeath, string facts){
     hero.getHero(name, kyn, yearOfBirth, yearOfDeath, facts);
 
+}
+
+void Service::addToDoc(){
+    hero.vectorToDoc();
 }

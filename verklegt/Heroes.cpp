@@ -88,18 +88,19 @@ void Heroes::getHero(string name, char kyn, int yearOfBirth, int yearOfDeath, st
 
 }
 
-/*void Heroes::vectorToDoc() {
+void Heroes::vectorToDoc() {
+
     ofstream outputFile;
     outputFile.open("upplysingar.txt", ofstream::app);
 
-    for(unsigned int i = 0; i < inputdoc.size(); i++) {
-            outputFile << "Name: " << inputdoc[i].name << endl;
-            outputFile << "Gender: " << inputdoc[i].kyn << endl;
-            outputFile << "Year of birth: " << inputdoc[i].yearOfBirth << endl;
-            outputFile << "Year of death: " << inputdoc[i].yearOfDeath << endl;
-            outputFile << "Facts: " << inputdoc[i].facts << endl;
+    for(unsigned int i = 0; i < v.size(); i++) {
+            outputFile << "Name: " << v[i].getName() << endl;
+            outputFile << "Gender: " << v[i].getKyn() << endl;
+            outputFile << "Year of birth: " << v[i].getYearOfBirth() << endl;
+            outputFile << "Year of death: " << v[i].getYearOfDeath() << endl;
+            outputFile << "Facts: " << v[i].getFacts() << endl;
             outputFile << endl;
     }
 
     outputFile.close();
-}*/
+}

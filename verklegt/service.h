@@ -11,6 +11,7 @@ public:
     Service();
     vector<Scientist> getV();
     void getHero(string name, char kyn, int yearOfBirth, int yearOfDeath, string facts);
+    void addToDoc();
 private:
     Heroes hero;
 

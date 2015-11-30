@@ -1,6 +1,0 @@
-Name: John Thor
-Gender: Male
-Year of birth: 1994
-Year of death: 2050
-Facts: Rock on solid!
-

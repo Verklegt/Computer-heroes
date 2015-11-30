@@ -32,20 +32,12 @@ void User::chooseNumb() {
     cout << "            |  Push any other button to quit!      |" << endl;
     cout << "            '--------------------------------------'" << endl;
 }
-void User::getHero() {
 
-    cout << "Name: " << endl;
-    cout << "Gender: " << endl;
-    cout << "Year of birth: " << endl;
-    cout << "Year of death: " << endl;
-    cout << "Facts: " << endl;
-
-
-}
 void User::inputInfo(int n){
     switch (n){
         case 1:
             addPerson();
+            serv.addToDoc();
             break;
         case 2:
             break;
@@ -57,6 +49,7 @@ void User::inputInfo(int n){
             break;
        }
 }
+
 void User::addPerson(){
 
         string name;
@@ -78,5 +71,5 @@ void User::addPerson(){
         getline(cin,fact);
         cout << endl;
 
-        //serv.getHero(name, kyn, yearOfBirth, yearOfDeath, fact);
+        serv.getHero(name, kyn, yearOfBirth, yearOfDeath, fact);
 }

@@ -11,7 +11,6 @@ public:
     User();
     void chooseNumb();
     void welcomeMessage();
-    void getHero();
     void inputInfo(int n);
     void addPerson();
 
