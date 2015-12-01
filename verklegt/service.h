@@ -12,6 +12,7 @@ public:
     vector<Scientist> getV();
     void getHero(string name, char kyn, int yearOfBirth, int yearOfDeath, string facts);
     void addToDoc();
+    void SearchKeyword();
 private:
     Heroes hero;
 

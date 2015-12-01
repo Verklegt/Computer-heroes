@@ -43,6 +43,7 @@ void User::inputInfo(int n){
             printHero();
             break;
         case 3:
+            serv.SearchKeyword();
             break;
         case 4:
             break;

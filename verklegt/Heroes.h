@@ -15,18 +15,11 @@ class Heroes
 {
 public:
     Heroes();
-    Heroes(string n, char k, string f, int yB, int yD);
     vector<Scientist> getVec();
-    //vector<Scientist> setVec(int yearOfBirth, int yearOfDeath, string name, string kyn, string facts);
     void getHero(string name, char kyn, int yearOfBirth, int yearOfDeath, string facts);
-    void inputInfo(int n);
-    void inputFile();
     void vectorToDoc();
-    void printHero();
-
+    void KeyWord();
 private:
     vector<Scientist> v;
-    vector<Heroes> computer;
-    //vector<Heroes> inputdoc;
 };
 #endif // COMPUTERHEROS_H

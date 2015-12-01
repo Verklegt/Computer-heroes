@@ -19,3 +19,7 @@ void Service::getHero(string name, char kyn, int yearOfBirth, int yearOfDeath, s
 void Service::addToDoc(){
     hero.vectorToDoc();
 }
+
+void Service::SearchKeyword() {
+    hero.KeyWord();
+}
