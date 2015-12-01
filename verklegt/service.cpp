@@ -14,7 +14,6 @@ vector<Scientist> Service::getV(){
 }
 void Service::getHero(string name, char kyn, int yearOfBirth, int yearOfDeath, string facts){
     hero.getHero(name, kyn, yearOfBirth, yearOfDeath, facts);
-
 }
 
 void Service::addToDoc(){

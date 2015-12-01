@@ -74,19 +74,19 @@ void User::addPerson(){
         serv.getHero(name, kyn, yearOfBirth, yearOfDeath, fact);
 }
 
-/*void User::printHero() {
+void User::printHero() {
 
     string line;
       ifstream myfile ("upplysingar.txt");
       if (myfile.is_open())
       {
-        while ( getline (myfile,line) )
+        while ( getline (myfile,line,':') )
         {
-          cout << line << '\n';
+          cout << line << 
         }
         myfile.close();
       }
 
       else cout << "Unable to open file" << endl;
 
-}*/
+}
