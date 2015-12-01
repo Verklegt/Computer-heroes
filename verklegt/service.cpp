@@ -5,18 +5,17 @@
 
 using namespace std;
 
-Service::Service()
-{
+Service::Service() {
     hero = Heroes();
 }
-vector<Scientist> Service::getV(){
+vector<Scientist> Service::getV() {
     return hero.getVec();
 }
-void Service::getHero(string name, char kyn, int yearOfBirth, int yearOfDeath, string facts){
-    hero.getHero(name, kyn, yearOfBirth, yearOfDeath, facts);
+void Service::getHero(string name, char kyn, int yearOfBirth, int yearOfDeath, string facts) {
+    hero.getHero(name, kyn, yearOfBirth, yearOfDeath, facts); //tekur inn upplýsingar um manneskjuna
 }
 
-void Service::addToDoc(){
+void Service::addToDoc() {
     hero.vectorToDoc();
 }
 
@@ -32,10 +31,10 @@ void Service::descending() {
     hero.descending();
 }
 
-void Service::SetDocToVector(){
+void Service::SetDocToVector() {
     hero.fileToVector();
 }
 
-void Service::ClearVec(){
+void Service::ClearVec() {
     hero.ClearingVec();
 }

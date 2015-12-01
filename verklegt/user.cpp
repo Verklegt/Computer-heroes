@@ -4,9 +4,7 @@
 #include <limits>
 using namespace std;
 
-User::User(){
-
-}
+User::User(){}
 
 void User::welcomeMessage() {
     cout << "                |   |   '                    ,--.---." << endl;
@@ -29,11 +27,13 @@ void User::chooseNumb() {
     cout << "            |  2. Get info on computer scientist's |" << endl;
     cout << "            |  3. Search for computer scientist    |" << endl;
     cout << "            |  4. Sort list of computer scientists |" << endl;
+    cout << "            |  5. Feeling lucky!                   |" << endl;
     cout << "            |  Push any other button to quit!      |" << endl;
     cout << "            '--------------------------------------'" << endl;
 }
 
-void User::inputInfo(int n){
+void User::inputInfo(int n) {
+
     switch (n){
         case 1:
             addPerson();
@@ -52,15 +52,17 @@ void User::inputInfo(int n){
         case 4:
             serv.SetDocToVector();
             chooseSearch();
-            ascOrDesc(n);
             serv.ClearVec();
+            break;
+        case 5:
+            FeelingLucky();
             break;
         default:
             break;
        }
 }
 
-void User::addPerson(){
+void User::addPerson() {
 
         string name;
         char kyn;
@@ -85,6 +87,7 @@ void User::addPerson(){
 }
 
 void User::printHero() {
+
     for(unsigned int i = 0; i < serv.getV().size(); i++) {
         cout << "Name: " << serv.getV()[i].getName() << endl;
         cout << "Gender: " << serv.getV()[i].getKyn() << endl;
@@ -99,56 +102,35 @@ void User::chooseSearch() {
     cout << "            ,--------------------------------------," << endl;
     cout << "            |  1. Ascending                        |" << endl;
     cout << "            |  2. Descending                       |" << endl;
-    cout << "            |  Push any other button to quit!      |" << endl;
+    cout << "            |  Push any other button to go back    |" << endl;
     cout << "            '--------------------------------------'" << endl;
     int n = 0;
     cin >> n;
 
-    if(n == 1)
-    {
-        serv.ascending();
-        chooseKind();
-    }
-    else
-    {
-       cout << "Wrong input. Try again. " << endl;
-       chooseSearch();
-    }
-}
-void User::chooseKind() {
-    cout << "            ,--------------------------------------," << endl;
-    cout << "            |  1. Name                             |" << endl;
-    cout << "            |  2. Gender                           |" << endl;
-    cout << "            |  3. Year of birth                    |" << endl;
-    cout << "            |  4. Year of death                    |" << endl;
-    cout << "            |  Push any other button to quit!      |" << endl;
-    cout << "            '--------------------------------------'" << endl;
-    int number = 0;
-    cin >> number;
-
-    if(number == 1) {
+    if(n == 1){
         serv.ascending();
         printHero();
     }
-
+    if(n == 2){
+        serv.descending();
+        printHero();
+    }
+    else{}
 }
 
-void User::ascOrDesc(int& n){
-/*
-    if(n == 1)
-    {
-        serv.ascending();
-        chooseKind();
-    }
-    else if(input == 2)
-    {
-        serv.descending();
-        chooseKind();
-    }
-    else
-    {
-       cout << "Wrong input. Try again. " << endl;
-       chooseSearch();
-    }
-    */
+void User::FeelingLucky() {
+        cout << "   .........             @@@@@    @@@@@  ........... " << endl;
+        cout << "   .........            @     @  @     @ ..........." << endl;
+        cout << "    ........               @@@   @     @  .........." << endl;
+        cout << "     .......             @@      @     @    ........." << endl;
+        cout << "      ......            @@@@@@@   @@@@@  th   ......." << endl;
+        cout << "        .....         -----------------------  ......" << endl;
+        cout << "         ....           C  E  N  T  U  R  Y     ....." << endl;
+        cout << "          ...         -----------------------     ...." << endl;
+        cout << "            ..        @@@@@ @@@@@ @   @ @@@@@       .." << endl;
+        cout << "            ==          @   @      @ @    @          ==" << endl;
+        cout << "          __||__        @   @@@@    @     @        __||__" << endl;
+        cout << "         |      |       @   @      @ @    @       |      |" << endl;
+        cout << "_________|______|_____  @   @@@@@ @   @   @  _____|______|_________" << endl;
+        cout << endl;
 }

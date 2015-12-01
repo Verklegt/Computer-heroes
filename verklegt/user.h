@@ -4,9 +4,7 @@
 #include <iostream>
 using namespace std;
 
-
-class User
-{
+class User{
 public:
     User();
     void chooseNumb();
@@ -17,7 +15,7 @@ public:
     void chooseSearch();
     void chooseKind();
     void ascOrDesc(int& n);
-
+    void FeelingLucky();
 private:
     Service serv;
 };

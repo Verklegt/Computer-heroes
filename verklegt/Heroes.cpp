@@ -18,7 +18,7 @@ vector<Scientist> Heroes::getVec(){
     return v;
 }
 
-void Heroes::getHero(string name, char kyn, int yearOfBirth, int yearOfDeath, string facts) {
+void Heroes::getHero(string name, char kyn, int yearOfBirth, int yearOfDeath, string facts) { //gets info from User and puts it in vector
 
     Scientist s;
     s.setName(name);
@@ -30,10 +30,10 @@ void Heroes::getHero(string name, char kyn, int yearOfBirth, int yearOfDeath, st
     v.push_back(s);
 }
 
-void Heroes::vectorToDoc() {
+void Heroes::vectorToDoc() { //gets the vector from Heroes private stash and stores it in a document
 
     ofstream outputFile;
-    outputFile.open("upplysingar.txt", ofstream::app);
+    outputFile.open("upplysingar.txt", ofstream::app); //we use ofstream::app so we dont overwrite the document
 
     for(unsigned int i = 0; i < v.size(); i++) {
             outputFile << v[i].getName() << ":";
@@ -44,11 +44,11 @@ void Heroes::vectorToDoc() {
     }
 
     outputFile.close();
-    v.clear();
+    v.clear(); // then we clear out the vector so we dont duplicate the scientist that the user puts in
 }
 
-void Heroes::KeyWord()
-{
+void Heroes::KeyWord(){
+
    ifstream FileSearch;
    string letters;
    unsigned int position = 0;
@@ -76,83 +76,55 @@ void Heroes::KeyWord()
      }
      cout << "Cant find " << letters << endl;
 }
-void Heroes::fileToVector(){
+void Heroes::fileToVector(){ //here we put the info from the txt file to vector so the user can close the program and it will still be functional
 
     ifstream file("upplysingar.txt");
     string line;
     while (getline(file, line) ) {
         if ( !line.empty() ){
-           Scientist jon;
+           Scientist user;
 
-           jon.setName(line.substr(0, line.find(':')));
+           user.setName(line.substr(0, line.find(':')));
            line = line.substr(line.find(':')+1);
 
-           jon.setKyn(line.substr(0, line.find(':'))[0]);
+           user.setKyn(line.substr(0, line.find(':'))[0]);
            line = line.substr(line.find(':')+1);
 
-           jon.setYearOfBirth(atoi(line.substr(0, line.find(':')).c_str()));
+           user.setYearOfBirth(atoi(line.substr(0, line.find(':')).c_str()));
            line = line.substr(line.find(':')+1);
 
-           jon.setYearOfDeath(atoi((line.substr(0, line.find(':')).c_str())));
+           user.setYearOfDeath(atoi((line.substr(0, line.find(':')).c_str())));
            line = line.substr(line.find(':')+1);
 
-           jon.setFacts(line.substr(0, line.find('\n')));
+           user.setFacts(line.substr(0, line.find('\n')));
            line = "";
-           v.push_back(jon);
+           v.push_back(user);
         }
     }
 }
 
-bool compare(Scientist x, Scientist y){
+bool compareAsc(Scientist x, Scientist y){
 
     return x.getName() < y.getName();
 }
 
-void Heroes::ascending(){
+bool compareDesc(Scientist x, Scientist y){
+
+    return x.getName() > y.getName();
+}
+
+void Heroes::ascending(){ //Ascending sorting algorithm
 
     Scientist s;
 
-
-    //if(n == 1){
-        sort (v.begin(), v.end(), compare);
-
-    //}
-    /*else if(n == 2){
-        sort (v.begin(), v.end(), v.getKyn());
-    }
-    else if(n == 3){
-        sort (v.begin(), v.end(), v.getYerOfBirth());
-    }
-    else if(n == 4){
-       sort (v.begin(), v.end(), v.getYearOfDeath());
-    }
-    else{
-        cout << "Wrong input. Try again. " << endl;
-        chooseSearch();
-    }*/
+    sort (v.begin(), v.end(), compareAsc);
 }
 
-void Heroes::descending(){
+void Heroes::descending(){ //Descending sorting algorithm
 
-   /* Scientist s;
-    int d = 0;
+   Scientist s;
 
-    if(d == 1){
-        sort (v.begin(), v.end(), s.getName());
-    }
-    else if(d == 2){
-        sort (v.begin(), v.end(), kyn);
-    }
-    else if(d == 3){
-        sort (v.begin(), v.end(), yerOfBirth);
-    }
-    else if(d == 4){
-       sort (v.begin(), v.end(), yearOfDeath);
-    }
-    else{
-        cout << "Wrong input. Try again. " << endl;
-        chooseSearch();
-    }*/
+    sort (v.begin(), v.end(), compareDesc);
 }
 
 void Heroes::ClearingVec() {

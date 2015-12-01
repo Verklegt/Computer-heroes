@@ -9,8 +9,7 @@ Scientist::Scientist(){
     yearOfDeath = 0;
 }
 
-Scientist::Scientist(string n, char k, string f, int yB, int yD)
-{
+Scientist::Scientist(string n, char k, string f, int yB, int yD){
     name = n;
     kyn = k;
     facts = f;

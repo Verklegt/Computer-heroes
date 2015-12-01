@@ -1,2 +1,10 @@
-John thor:M:1994:2044:hann er meistari
-Siddi marh:M:599:4999:sid er sid
+Alan Turing:M:1912:1954:The Father of Computer Science and Artificial Intelligence. Made the Turing Machine.
+Charles Babbage:M:1791:1871:Designed the Analytical Engine and built a prototype for a less powerful mechanical calculator.
+John Backus:M:1924:2007:Invented FORTRAN (Formula Translation), the first practical high-level programming language, and he formulated the Backus–Naur form.
+George Boole:M:1815:1864:Formalized Boolean algebra, which is the foundation of digital logic.
+Grace Hopper:F:1906:1992:Invented the first compiler for a computer programming language and influenced the development of COBOL, the first high-level programming language.
+Gottfried Leibniz:M:1646:1716 - Made developments in first-order predicate calculus.
+Ada Lovelace:F:1815:1852:Often called the first programmer. The Ada programming language is named after her.
+Blaise Pascal:M:1623:1662:Invented the mechanical calculator.
+Edsger Dijkstra:M:1930:2002:Made advances in algorithms and is known for his Dijkstra’s algorithm and the semaphore.
+Douglas Engelbart:M:1925:2013:Invented the computer mouse and known for his work on founding the field of human-computer interaction.
