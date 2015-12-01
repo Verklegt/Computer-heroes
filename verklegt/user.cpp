@@ -76,6 +76,8 @@ void User::addPerson(){
 }
 
 void User::printHero() {
+
+    cout << "Name: " << "\t" << "\t" << "Gender: " << "Birth: " << "\t" << "Death: " << "\t" << "Facts: " << endl;
     string line;
       ifstream myfile ("upplysingar.txt");
       if (myfile.is_open())
@@ -85,6 +87,7 @@ void User::printHero() {
         {
             cout << line << "\t";
         }
+        cout << endl;
         myfile.close();
       }
 
