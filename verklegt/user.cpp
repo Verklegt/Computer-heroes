@@ -24,7 +24,7 @@ void User::welcomeMessage() {
 void User::chooseNumb() {
     cout << "            ,--------------------------------------," << endl;
     cout << "            |  1. Input a computer scientist       |" << endl;
-    cout << "            |  2. Get info on computer scientist's |" << endl;
+    cout << "            |  2. Get info on computer scientists  |" << endl;
     cout << "            |  3. Search for computer scientist    |" << endl;
     cout << "            |  4. Sort list of computer scientists |" << endl;
     cout << "            |  5. Feeling lucky!                   |" << endl;
@@ -115,7 +115,10 @@ void User::chooseSearch() {
         serv.descending();
         printHero();
     }
-    else{}
+    else{
+        cout << "Wrong input. Try again!" << endl;
+        chooseSearch();
+    }
 }
 
 void User::FeelingLucky() {
