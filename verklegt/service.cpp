@@ -35,3 +35,7 @@ void Service::descending() {
 void Service::SetDocToVector(){
     hero.fileToVector();
 }
+
+void Service::ClearVec(){
+    hero.ClearingVec();
+}

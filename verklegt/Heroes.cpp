@@ -44,7 +44,7 @@ void Heroes::vectorToDoc() {
     }
 
     outputFile.close();
-    v.pop_back();
+    v.clear();
 }
 
 void Heroes::KeyWord()
@@ -99,7 +99,6 @@ void Heroes::fileToVector(){
            jon.setFacts(line.substr(0, line.find('\n')));
            line = "";
            v.push_back(jon);
-
         }
     }
 }
@@ -156,3 +155,6 @@ void Heroes::descending(){
     }*/
 }
 
+void Heroes::ClearingVec() {
+    v.clear();
+}

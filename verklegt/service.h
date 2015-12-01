@@ -16,6 +16,7 @@ public:
     void ascending();
     void descending();
     void SetDocToVector();
+    void ClearVec();
 private:
     Heroes hero;
 

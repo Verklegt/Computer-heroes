@@ -23,9 +23,7 @@ public:
     void fileToVector();
     void ascending();
     void descending();
-
-
-
+    void ClearingVec();
 private:
     vector<Scientist> v;
 

@@ -34,21 +34,26 @@ void User::chooseNumb() {
 }
 
 void User::inputInfo(int n){
-    serv.SetDocToVector();
     switch (n){
         case 1:
             addPerson();
             serv.addToDoc();
             break;
         case 2:
+            serv.SetDocToVector();
             printHero();
+            serv.ClearVec();
             break;
         case 3:
+            serv.SetDocToVector();
             serv.SearchKeyword();
+            serv.ClearVec();
             break;
         case 4:
+            serv.SetDocToVector();
             chooseSearch();
             ascOrDesc(n);
+            serv.ClearVec();
             break;
         default:
             break;
