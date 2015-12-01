@@ -40,6 +40,7 @@ void User::inputInfo(int n){
             serv.addToDoc();
             break;
         case 2:
+            printHero();
             break;
         case 3:
             break;
@@ -74,19 +75,19 @@ void User::addPerson(){
         serv.getHero(name, kyn, yearOfBirth, yearOfDeath, fact);
 }
 
-/*void User::printHero() {
-
+void User::printHero() {
     string line;
       ifstream myfile ("upplysingar.txt");
       if (myfile.is_open())
       {
-        while ( getline (myfile,line) )
+
+        while (getline(myfile,line,':'))
         {
-          cout << line << '\n';
+            cout << line << "\t";
         }
         myfile.close();
       }
 
       else cout << "Unable to open file" << endl;
 
-}*/
+}

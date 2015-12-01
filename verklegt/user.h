@@ -13,6 +13,7 @@ public:
     void welcomeMessage();
     void inputInfo(int n);
     void addPerson();
+    void printHero();
 
 private:
     Service serv;
