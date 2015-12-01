@@ -15,6 +15,7 @@ public:
     void SearchKeyword();
     void ascending();
     void descending();
+    void SetDocToVector();
 private:
     Heroes hero;
 

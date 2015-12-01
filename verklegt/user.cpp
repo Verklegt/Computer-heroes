@@ -34,6 +34,7 @@ void User::chooseNumb() {
 }
 
 void User::inputInfo(int n){
+    serv.SetDocToVector();
     switch (n){
         case 1:
             addPerson();
@@ -79,23 +80,14 @@ void User::addPerson(){
 }
 
 void User::printHero() {
-
-    cout << "Name: " << "\t" << "\t" << "Gender: " << "Birth: " << "\t" << "Death: " << "\t" << "Facts: " << endl;
-    string line;
-      ifstream myfile ("upplysingar.txt");
-      if (myfile.is_open())
-      {
-
-        while (getline(myfile,line,':'))
-        {
-            cout << line << "\t";
-        }
+    for(unsigned int i = 0; i < serv.getV().size(); i++) {
+        cout << "Name: " << serv.getV()[i].getName() << endl;
+        cout << "Gender: " << serv.getV()[i].getKyn() << endl;
+        cout << "Year of birth: " << serv.getV()[i].getYearOfBirth() << endl;
+        cout << "Year of death: " << serv.getV()[i].getYearOfDeath() << endl;
+        cout << "Facts: " << serv.getV()[i].getFacts() << endl;
         cout << endl;
-        myfile.close();
-      }
-
-      else cout << "Unable to open file" << endl;
-
+    }
 }
 
 void User::chooseSearch() {
@@ -131,6 +123,7 @@ void User::chooseKind() {
 
     if(number == 1) {
         serv.ascending();
+        printHero();
     }
 
 }

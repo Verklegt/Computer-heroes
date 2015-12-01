@@ -31,3 +31,7 @@ void Service::ascending() {
 void Service::descending() {
     hero.descending();
 }
+
+void Service::SetDocToVector(){
+    hero.fileToVector();
+}

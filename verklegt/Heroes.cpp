@@ -87,7 +87,6 @@ void Heroes::fileToVector(){
            jon.setName(line.substr(0, line.find(':')));
            line = line.substr(line.find(':')+1);
 
-
            jon.setKyn(line.substr(0, line.find(':'))[0]);
            line = line.substr(line.find(':')+1);
 
@@ -99,12 +98,10 @@ void Heroes::fileToVector(){
 
            jon.setFacts(line.substr(0, line.find('\n')));
            line = "";
-           cout << jon.getName();
            v.push_back(jon);
+
         }
-
-
-}
+    }
 }
 
 bool compare(Scientist x, Scientist y){
@@ -115,12 +112,12 @@ bool compare(Scientist x, Scientist y){
 void Heroes::ascending(){
 
     Scientist s;
-    int n = 0;
 
 
-    if(n == 1){
+    //if(n == 1){
         sort (v.begin(), v.end(), compare);
-    }
+
+    //}
     /*else if(n == 2){
         sort (v.begin(), v.end(), v.getKyn());
     }
