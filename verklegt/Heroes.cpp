@@ -1,10 +1,13 @@
 #include "Heroes.h"
+#include "scientist.h"
 #include <fstream>
 #include <iostream>
 #include <istream>
 #include <string>
 #include <vector>
 #include <limits>
+#include <algorithm>
+#include <iterator>
 using namespace std;
 
 Heroes::Heroes() {
@@ -73,3 +76,34 @@ void Heroes::KeyWord()
      }
      cout << "Cant find " << letters << endl;
 }
+void Heroes::fileToVector(){
+
+    ifstream file("upplysingar.txt");
+    string line;
+    while (getline(file, line) ) {
+        if ( !line.empty() ){
+           Scientist jon;
+
+           jon.setName(line.substr(0, line.find(':')));
+           line = line.substr(line.find(':')+1);
+
+
+           jon.setKyn(line.substr(0, line.find(':'))[0]);
+           line = line.substr(line.find(':')+1);
+
+           jon.setYearOfBirth(atoi(line.substr(0, line.find(':')).c_str()));
+           line = line.substr(line.find(':')+1);
+
+           jon.setYearOfDeath(atoi((line.substr(0, line.find(':')).c_str())));
+           line = line.substr(line.find(':')+1);
+
+           jon.setFacts(line.substr(0, line.find('\n')));
+           line = "";
+           cout << jon.getName();
+           v.push_back(jon);
+        }
+
+
+}
+}
+

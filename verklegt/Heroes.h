@@ -8,6 +8,7 @@
 #include <fstream>
 #include <sstream>
 #include <limits>
+
 using namespace std;
 
 
@@ -19,7 +20,11 @@ public:
     void getHero(string name, char kyn, int yearOfBirth, int yearOfDeath, string facts);
     void vectorToDoc();
     void KeyWord();
+    void fileToVector();
+
+
 private:
     vector<Scientist> v;
+
 };
 #endif // COMPUTERHEROS_H

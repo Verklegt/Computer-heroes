@@ -1,2 +1,4 @@
-John do:M:23123:132123:adsfasdf
-asfdadsf:m:324:234:asdfafa fafa ef 
+john thor:M:1994:2020:aaaaaaaaaa aaaaaaaaaaa
+Siddi siddi:M:1994:2020:bbbbbbbbbb bbbbbbbbbbb
+E trauston:M:1995:2020:cccccccc cccccccc
+asda :m:1994:2020:asdasda

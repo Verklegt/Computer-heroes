@@ -1,12 +1,15 @@
 #include "User.h"
 #include <iostream>
 #include <sstream>
+#include "Heroes.h"
 #include <limits>
 using namespace std;
 
 
 int main()
 {
+    Heroes test1;
+    test1.fileToVector();
     User test;
     test.welcomeMessage();
     int n = 0;
