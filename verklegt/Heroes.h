@@ -21,6 +21,9 @@ public:
     void vectorToDoc();
     void KeyWord();
     void fileToVector();
+    void ascending();
+    void descending();
+
 
 
 private:

@@ -14,6 +14,9 @@ public:
     void inputInfo(int n);
     void addPerson();
     void printHero();
+    void chooseSearch();
+    void chooseKind();
+    void ascOrDesc(int& n);
 
 private:
     Service serv;

@@ -23,3 +23,11 @@ void Service::addToDoc(){
 void Service::SearchKeyword() {
     hero.KeyWord();
 }
+
+void Service::ascending() {
+    hero.ascending();
+}
+
+void Service::descending() {
+    hero.descending();
+}

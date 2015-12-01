@@ -107,3 +107,55 @@ void Heroes::fileToVector(){
 }
 }
 
+bool compare(Scientist x, Scientist y){
+
+    return x.getName() < y.getName();
+}
+
+void Heroes::ascending(){
+
+    Scientist s;
+    int n = 0;
+
+
+    if(n == 1){
+        sort (v.begin(), v.end(), compare);
+    }
+    /*else if(n == 2){
+        sort (v.begin(), v.end(), v.getKyn());
+    }
+    else if(n == 3){
+        sort (v.begin(), v.end(), v.getYerOfBirth());
+    }
+    else if(n == 4){
+       sort (v.begin(), v.end(), v.getYearOfDeath());
+    }
+    else{
+        cout << "Wrong input. Try again. " << endl;
+        chooseSearch();
+    }*/
+}
+
+void Heroes::descending(){
+
+   /* Scientist s;
+    int d = 0;
+
+    if(d == 1){
+        sort (v.begin(), v.end(), s.getName());
+    }
+    else if(d == 2){
+        sort (v.begin(), v.end(), kyn);
+    }
+    else if(d == 3){
+        sort (v.begin(), v.end(), yerOfBirth);
+    }
+    else if(d == 4){
+       sort (v.begin(), v.end(), yearOfDeath);
+    }
+    else{
+        cout << "Wrong input. Try again. " << endl;
+        chooseSearch();
+    }*/
+}
+

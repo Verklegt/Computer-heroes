@@ -13,6 +13,8 @@ public:
     void getHero(string name, char kyn, int yearOfBirth, int yearOfDeath, string facts);
     void addToDoc();
     void SearchKeyword();
+    void ascending();
+    void descending();
 private:
     Heroes hero;
 
