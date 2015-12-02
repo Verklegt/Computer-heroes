@@ -7,4 +7,4 @@ Gottfried Leibniz:M:1646:1716 - Made developments in first-order predicate calcu
 Ada Lovelace:F:1815:1852:Often called the first programmer. The Ada programming language is named after her.
 Blaise Pascal:M:1623:1662:Invented the mechanical calculator.
 Edsger Dijkstra:M:1930:2002:Made advances in algorithms and is known for his Dijkstra’s algorithm and the semaphore.
-Douglas Engelbart:M:1925:2013:Invented the computer mouse and known for his work on founding the field of human-computer interaction.Eythor traustason:M:1995:2020:mikil limur
+Douglas Engelbart:M:1925:2013:Invented the computer mouse and known for his work on founding the field of human-computer interaction.
