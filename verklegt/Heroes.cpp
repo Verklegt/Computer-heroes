@@ -49,32 +49,28 @@ void Heroes::vectorToDoc() { //gets the vector from Heroes private stash and sto
 
 void Heroes::KeyWord(){
 
-   ifstream FileSearch;
-   string letters;
-   unsigned int position = 0;
-   string line;
+    string letters;
+        int counter = 0;
 
-    ifstream readSearch;
-    cout << "Enter a search word: ";
-     cin >> letters;
-     cout << endl;
-     FileSearch.open("upplysingar.txt");
-    if(FileSearch.is_open())
-    {
-        while(getline(FileSearch, line)){
-            FileSearch >> line;
-            cout << line << endl;
-            position = line.find(letters, position++);
+        cout << "Enter a searchword: ";
+        getline(cin, letters);
+        cout << endl;
 
-            if(position == string::npos){
+        for (unsigned int i = 0; i < v.size(); i++){
+            if(v.at(i).getName().find(letters) != string::npos) {
+                counter++;
+                cout << "Name: " << v[i].getName() << endl;
+                cout << "Gender: " << v[i].getKyn() << endl;
+                cout << "Year of birth: " << v[i].getYearOfBirth() << endl;
+                cout << "Year of death: " << v[i].getYearOfDeath() << endl;
+                cout << "Facts: " << v[i].getFacts() << endl;
+                cout << endl;
             }
-            if(FileSearch.eof()){
-                break;
-            }
-        cout <<line <<endl;
         }
-     }
-     cout << "Cant find " << letters << endl;
+        if(counter == 0) {
+            cout << "No match for: " << letters << endl;
+            cout << endl;
+        }
 }
 void Heroes::fileToVector(){ //here we put the info from the txt file to vector so the user can close the program and it will still be functional
 

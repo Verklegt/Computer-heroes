@@ -78,6 +78,12 @@ void User::addPerson() {
         cin >> yearOfBirth;
         cout << "Year of death: ";
         cin >> yearOfDeath;
+        while(yearOfDeath < yearOfBirth) {
+                    if(yearOfDeath < yearOfBirth) {
+                        cout << "Persons cannot die before they are born. Input correct year of death!" << endl;
+                        cin >> yearOfDeath;
+                    }
+                }
         cin.ignore(numeric_limits < streamsize>::max(), '\n'); //so getline works correctly after cin command
         cout << "Facts: ";
         getline(cin,fact);
@@ -115,10 +121,7 @@ void User::chooseSearch() {
         serv.descending();
         printHero();
     }
-    else{
-        cout << "Wrong input. Try again!" << endl;
-        chooseSearch();
-    }
+    else{}
 }
 
 void User::FeelingLucky() {
